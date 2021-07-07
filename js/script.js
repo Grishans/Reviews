@@ -32,16 +32,21 @@ categoriesCurrent.forEach(function (item, i) {
       (subBox.clientHeight / 2) * -1 +
       "px";
     subBox.style.left = item.getBoundingClientRect().right + 25 + "px";
+
     item.classList.add("selectCutegori");
     item.addEventListener("mouseout", () => {
       item.classList.remove("selectCutegori");
     });
   });
 
-  subBox.addEventListener("mouseout", () => {
+  document.querySelector(".mainScrean").addEventListener("mouseover", () => {
     subBox.style.display = "none";
     item.classList.remove("selectCutegori");
   });
+  // subBox.addEventListener("mouseout", () => {
+  //   subBox.style.display = "none";
+  //   item.classList.remove("selectCutegori");
+  // });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
